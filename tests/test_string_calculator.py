@@ -43,3 +43,8 @@ def test_stringcalculator_must_return_count_of_calls_to_add_function():
 def test_stringcalculator_must_ignore_numbers_greater_than_thousand():
     assert add("2,1002") == 2
     assert add("1001,1001") == 0
+
+# TEST 10: Allow delimiters of any length
+def test_stringcalculator_must_allow_delimiters_of_any_legth():
+    assert add("//[***]\n1***2") == 3
+    assert add("//[@@]\n1@@2@@3@@4@@5") == 15
