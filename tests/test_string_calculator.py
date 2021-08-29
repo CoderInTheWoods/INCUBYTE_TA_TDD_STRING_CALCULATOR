@@ -48,3 +48,8 @@ def test_stringcalculator_must_ignore_numbers_greater_than_thousand():
 def test_stringcalculator_must_allow_delimiters_of_any_legth():
     assert add("//[***]\n1***2") == 3
     assert add("//[@@]\n1@@2@@3@@4@@5") == 15
+
+# TEST 10: Allow multiple delimiters
+def test_stringcalculator_must_allow_multiple_delimiters():
+    assert add("//[***][###]\n1***2###3") == 6
+    assert add("//[@][#][$]\n1@2#3$4@5") == 15
