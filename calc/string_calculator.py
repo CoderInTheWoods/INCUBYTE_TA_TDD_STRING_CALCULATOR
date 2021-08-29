@@ -5,7 +5,13 @@ def add(numbers):
     no_of_calls += 1
 
     if numbers == "": return 0
-    elif numbers.startswith("//"):numbers = numbers.replace(numbers[2],',')[4:]
+    elif numbers.startswith("//"):
+        if not '[' in numbers:
+            numbers = numbers.replace(numbers[2],',')[4:]
+        else:
+            delimiter_info, num_str = numbers.split('\n')
+            numbers = num_str.replace(delimiter_info[3:-1],',')
+
     else:numbers = numbers.replace('\n',',')
     
     numbers = list(map(int, numbers.split(',')))
