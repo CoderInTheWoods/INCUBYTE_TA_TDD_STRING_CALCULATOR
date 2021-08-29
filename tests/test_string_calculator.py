@@ -23,3 +23,8 @@ def test_stringcalculator_must_handle_unknown_amount_of_numbers():
 def test_stringcalculator_must_allow_newline_delimiter_instead_of_comma():
     assert add("1\n2") == 3
     assert add("1\n2\n3,4,5") == 15
+
+# TEST 6: Support different delimiters | Example : "//;\n1;2" where';' is the delimiter
+def test_stringcalculator_must_support_different_delimiters():
+    assert add("//;\n1;2") == 3
+    assert add("//#\n13#4#5") == 15
