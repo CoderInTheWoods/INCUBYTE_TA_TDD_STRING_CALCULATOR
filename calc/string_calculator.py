@@ -9,6 +9,7 @@ def add(numbers):
     else:numbers = numbers.replace('\n',',')
     
     numbers = list(map(int, numbers.split(',')))
+    numbers = list(filter(lambda x: x <= 1000, numbers))
 
     negative_nums = list(filter(lambda x: x < 0, numbers))
     if negative_nums:
