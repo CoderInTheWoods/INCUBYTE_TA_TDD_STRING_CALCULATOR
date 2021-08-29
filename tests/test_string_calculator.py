@@ -1,6 +1,7 @@
 import pytest
 
 from calc.string_calculator import add
+from calc.string_calculator import GetCalledCount
 
 # TEST 1: Return 0 on empty string
 def test_stringcalculator_must_return_zero_on_empty_string():
@@ -36,4 +37,4 @@ def test_stringcalculator_must_throw_exception_on_negative_numbers():
 
 # TEST 8: Return the count of number of times add() was invoked
 def test_stringcalculator_must_return_count_of_calls_to_add_function():
-    assert calc.GetCalledCount() == 11
+    assert GetCalledCount() == 10
