@@ -18,3 +18,8 @@ def test_stringcalculator_must_return_sum_on_two_number_string():
 def test_stringcalculator_must_handle_unknown_amount_of_numbers():
     assert add("1,2") == 3
     assert add("1,2,3,4,5") == 15
+
+# TEST 5: Allow newline '\n' delimiter instead of commas ','
+def test_stringcalculator_must_allow_newline_delimiter_instead_of_comma():
+    assert add("1\n2") == 3
+    assert add("1\n2\n3,4,5") == 15
