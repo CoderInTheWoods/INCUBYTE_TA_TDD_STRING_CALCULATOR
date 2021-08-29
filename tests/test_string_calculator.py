@@ -31,5 +31,5 @@ def test_stringcalculator_must_support_different_delimiters():
 
 # TEST 7: Throw exception on negative numbers
 def test_stringcalculator_must_throw_exception_on_negative_numbers():
-    with pytest.raises(Exception, match="NEGATIVE NUMBERS EXCEPTION : [-2, -4]"):
+    with pytest.raises(Exception, match="negatives not allowed : [-2, -4]"):
         assert add("//#\n1#-2#3#-4#5")

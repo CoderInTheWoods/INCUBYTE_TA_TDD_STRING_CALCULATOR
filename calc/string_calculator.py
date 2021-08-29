@@ -7,6 +7,6 @@ def add(numbers):
 
     negative_nums = list(filter(lambda x: x < 0, numbers))
     if negative_nums:
-        raise Exception(str('NEGATIVE NUMBERS EXCEPTION : '),str(negative_nums))
+        raise Exception(str('negatives not allowed : '),str(negative_nums))
 
     return sum(numbers)
