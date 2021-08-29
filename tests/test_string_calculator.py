@@ -33,3 +33,7 @@ def test_stringcalculator_must_support_different_delimiters():
 def test_stringcalculator_must_throw_exception_on_negative_numbers():
     with pytest.raises(Exception, match="negatives not allowed : [-2, -4]"):
         assert add("//#\n1#-2#3#-4#5")
+
+# TEST 8: Return the count of number of times add() was invoked
+def test_stringcalculator_must_return_count_of_calls_to_add_function():
+    assert calc.GetCalledCount() == 11
