@@ -13,3 +13,8 @@ def test_stringcalculator_must_return_numeric_value_on_single_number_string():
 # TEST 3: Return sum on two number string
 def test_stringcalculator_must_return_sum_on_two_number_string():
     assert add("1,2") == 3
+
+# TEST 4: Allow add() to handle unknown amount of numbers
+def test_stringcalculator_must_handle_unknown_amount_of_numbers():
+    assert add("1,2") == 3
+    assert add("1,2,3,4,5") == 15
