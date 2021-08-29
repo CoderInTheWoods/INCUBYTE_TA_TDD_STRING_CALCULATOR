@@ -38,3 +38,8 @@ def test_stringcalculator_must_throw_exception_on_negative_numbers():
 # TEST 8: Return the count of number of times add() was invoked
 def test_stringcalculator_must_return_count_of_calls_to_add_function():
     assert GetCalledCount() == 10
+
+# TEST 9: Ignore numbers greater than 1000
+def test_stringcalculator_must_ignore_numbers_greater_than_thousand():
+    assert add("2,1002") == 2
+    assert add("1001,1001") == 0
