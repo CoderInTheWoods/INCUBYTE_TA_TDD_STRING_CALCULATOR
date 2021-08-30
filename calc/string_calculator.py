@@ -10,7 +10,9 @@ def add(numbers):
             numbers = numbers.replace(numbers[2],',')[4:]
         else:
             delimiter_info, num_str = numbers.split('\n')
-            numbers = num_str.replace(delimiter_info[3:-1],',')
+            final_delimiter_list = [x[:-1] for x in delimiter_info[2:].split('[')[1:]]
+            for x in final_delimiter_list: num_str = num_str.replace(x,',')
+            numbers = num_str
 
     else:numbers = numbers.replace('\n',',')
     
