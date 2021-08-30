@@ -49,7 +49,12 @@ def test_stringcalculator_must_allow_delimiters_of_any_legth():
     assert add("//[***]\n1***2") == 3
     assert add("//[@@]\n1@@2@@3@@4@@5") == 15
 
-# TEST 10: Allow multiple delimiters
+# TEST 11: Allow multiple delimiters
 def test_stringcalculator_must_allow_multiple_delimiters():
     assert add("//[***][###]\n1***2###3") == 6
     assert add("//[@][#][$]\n1@2#3$4@5") == 15
+
+# TEST 12: Allow multiple delimiters of any lenght
+def test_stringcalculator_must_allow_multiple_delimiters_of_any_length():
+    assert add("//[***][###]\n1***2###3") == 6
+    assert add("//[@@][#][$$$$]\n1@@2#3$$$$4@@5") == 15
